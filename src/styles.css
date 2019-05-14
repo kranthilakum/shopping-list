@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+li {
+  cursor: pointer;
+}
+li.strikeout {
+  text-decoration: line-through;
+}

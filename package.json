@@ -1,0 +1,23 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "Vue Shopping List",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "bootstrap-vue": "2.0.0-rc.20",
+    "portal-vue": "2.1.4",
+    "vue": "2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  }
+}

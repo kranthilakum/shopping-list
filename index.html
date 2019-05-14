@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vue Example 001</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="src/styles.css">
+</head>
+
+<body>
+	<div id='shopping-list'>
+		<h3>{{ header }}</h3>
+		<div id="shopping-form">
+			<input v-model="newItem" type="text" placeholder="Add new item" v-on:keyup.enter="saveItem">
+			<button v-on:click="saveItem" v-bind:disabled="newItem.length === 0">Add</button>
+			<button v-on:click="prioritize">Prioritize</button>
+			<p v-if="items.length === 0">Start adding items...</p>
+			<ul>
+				<li v-for="item in reverseItems" v-bind:class="{strikeout: item.purchased}" v-on:click="togglePurchased(item)">
+					{{item.label}}</li>
+			</ul>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="./src/index.js"></script>
+</body>
+
+</html>
